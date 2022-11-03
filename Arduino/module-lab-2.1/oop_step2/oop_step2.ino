@@ -1,8 +1,6 @@
 class Instrument {
 public:
-  void play() {
-     Serial.println("default sound");    
-  }
+  virtual void play() = 0;
  
 protected:
   void makeSound(String s){

@@ -15,7 +15,7 @@ void loop(){
   Serial.println(c.getValue());
   c1->inc();
   Serial.println(c1->getValue());
-  delay(1000);
+  delay(10);
 
   
   Counter* c3 = new Counter(micros());

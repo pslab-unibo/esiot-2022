@@ -9,6 +9,7 @@ void setup(){
 
 void loop(){
   int value = analogRead(PHOTORES_PIN);
-  Serial.println(value);
+  double valueInVolt = ((double) value) * 5/1024;
+  Serial.println(String(value) + " -> in volt: " + valueInVolt );
   delay(PERIOD);
 };
