@@ -9,9 +9,9 @@
 #include <HTTPClient.h>
 
 const char* ssid = "LittleBarfly";
-const char* password = "esiot2122";
+const char* password = "esiot-2022";
 
-const char *serviceURI = "https://1fcf-137-204-20-125.ngrok.io";
+const char *serviceURI = "http://73a6-137-204-20-125.ngrok.io";
 
 void connectToWifi(const char* ssid, const char* password){
   WiFi.begin(ssid, password);
@@ -50,7 +50,7 @@ void loop() {
   if (WiFi.status()== WL_CONNECTED){      
 
     int value = random(15,20);
-    int code = sendData(serviceURI, value, "home");
+    int code = sendData(serviceURI, value, "lab_3_3");
     if (code == 200){
        Serial.println("ok");   
      } else {

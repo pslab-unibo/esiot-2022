@@ -10,7 +10,7 @@
 const char* ssid = "LittleBarfly";
 const char* password = "esiot-2022";
 
-const char *serviceURI = "http://71bc-93-40-208-156.ngrok.io";
+const char *serviceURI = "http://73a6-137-204-20-125.ngrok.io";
 
 void connectToWifi(const char* ssid, const char* password){
   WiFi.begin(ssid, password);

@@ -5,10 +5,13 @@
 /* wifi network info */
 
 const char* ssid = "LittleBarfly";
-const char* password = "esiot-2122";
+const char* password = "303HotelLittleBarfly";
 
 /* MQTT server address */
 const char* mqtt_server = "broker.mqtt-dashboard.com";
+
+/* MQTT topic */
+const char* topic = "esiot-2022";
 
 /* MQTT client management */
 
@@ -19,6 +22,7 @@ PubSubClient client(espClient);
 unsigned long lastMsgTime = 0;
 char msg[MSG_BUFFER_SIZE];
 int value = 0;
+
 
 void setup_wifi() {
 
@@ -62,7 +66,7 @@ void reconnect() {
       // Once connected, publish an announcement...
       // client.publish("outTopic", "hello world");
       // ... and resubscribe
-      client.subscribe("esiot-2122");
+      client.subscribe(topic);
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -99,6 +103,6 @@ void loop() {
     Serial.println(String("Publishing message: ") + msg);
     
     /* publishing the msg */
-    client.publish("esiot-2122", msg);  
+    client.publish(topic, msg);  
   }
 }

@@ -36,7 +36,7 @@ void loop() {
     // Send HTTP GET request
     int httpResponseCode = http.GET();
       
-    if (httpResponseCode>0) {
+    if (httpResponseCode > 0) {
       Serial.print("HTTP Response code: ");
       Serial.println(httpResponseCode);
       String payload = http.getString();
